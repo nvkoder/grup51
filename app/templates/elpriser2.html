@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed Elpriser</title>
+</head>
+<body>
+    <!-- Placeholder til iframe-koden -->
+    {{ iframe_code | safe }}
+
+
+    <button id="nextButton">Next</button>
+    <button id="backButton">Back</button>
+
+    <script>
+        // Lyt efter klik på "Next" knappen
+        document.getElementById("nextButton").addEventListener("click", function() {
+            window.location.href = "{{ url_for('beregn') }}"; // Skift til næste side ved at ændre URL'en
+        });
+
+        // Lyt efter klik på "Back" knappen
+        document.getElementById("backButton").addEventListener("click", function() {
+            window.history.back(); // Gå tilbage til forrige side
+        });
+    </script>
+
+</body>
+</html>

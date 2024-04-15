@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elpriser</title>
+    <style>
+        /* Styling kan tilpasses efter behov */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Elpriser</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dato</th>
+                    <th>Pris (DKK/kWh)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1. april 2024</td>
+                    <td>2.50</td>
+                </tr>
+                <tr>
+                    <td>2. april 2024</td>
+                    <td>2.45</td>
+                </tr>
+                <!-- Fortsæt med at tilføje rækker for forskellige datoer og priser -->
+            </tbody>
+        </table>
+
+
+        <div>
+            <h2>Oversigt</h2>
+            <ul>
+                <!-- Her vil priserne blive vist -->
+                {% for pris in elpriser %}
+                    <li>{{ pris | safe }}</li> <!-- Brug 'safe' filteret for at undgå HTML-escaping -->
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+#dette til påmindelsesknappen  
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<button class="reminder-button" onclick="showReminder()">Påmindelse</button>
+
+<script>
+function showReminder() {
+  // Tilføj din påmindelsesfunktionalitet her
+  alert("Husk at gøre noget!");
+}
+</script>
+
+</body>
+</html>
+

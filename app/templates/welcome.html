@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Velkommen til El-reminder</h2>
+<p>Du er nu logget ind.</p>
+
+<button id="nextButton">Next</button>
+<button id="backButton">Back</button>
+
+    <script>
+        // Lyt efter klik på "Next" knappen
+        document.getElementById("nextButton").addEventListener("click", function() {
+            window.location.href = "{{ url_for('elpriser9') }}"; // Skift til næste side ved at ændre URL'en
+        });
+
+        // Lyt efter klik på "Back" knappen
+        document.getElementById("backButton").addEventListener("click", function() {
+            window.history.back(); // Gå tilbage til forrige side
+        });
+    </script>
+
+</script>
+
+{% endblock %}

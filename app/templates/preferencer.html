@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Præferencer</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h2>Præferencer</h2>
+    <form action="/result" method="post">
+
+      <!DOCTYPE html>
+<html>
+<head>
+    <title>Præferencer</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h2>Præferencer</h2>
+    <form action="/result" method="post">
+        <div class="time-section">
+            <h3>Arbejdstid</h3>
+            <div class="time-icon sun"></div>
+            <label for="work_start_time">Starttidspunkt:</label>
+            <input type="time" id="work_start_time" name="work_start_time" min="00:00" max="24:00" required>
+            <label for="work_end_time">Sluttidspunkt:</label>
+            <input type="time" id="work_end_time" name="work_end_time" min="00:00" max="24:00" required>
+        </div>
+        <div class="time-section">
+            <h3>Søvntid</h3>
+            <div class="time-icon moon"></div>
+            <label for="sleep_start_time">Starttidspunkt:</label>
+            <input type="time" id="sleep_start_time" name="sleep_start_time" min="00:00" max="24:00" required>
+            <label for="sleep_end_time">Sluttidspunkt:</label>
+            <input type="time" id="sleep_end_time" name="sleep_end_time" min="00:00" max="24:00" required>
+        </div>
+        <button id="submit-button">Gem</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+{% endblock %}

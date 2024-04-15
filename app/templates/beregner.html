@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        #content {
+            width: 100%;
+            height: 100%;
+            background-color: #ebf3fb; /* Juster denne fargen til ønsket farge */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #content iframe {
+            width: 80%;
+            height: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <iframe frameborder="0" scrolling="auto" id="node-iframe-form-greenhousing-scale-form" class="node-iframe greenhousing-scale-form" src="https://old.sparenergi.dk/share-content/15046a2e579a6cbb40baeed6e92a51b1?font=1&vislogo=0"></iframe>
+    </div>
+    <button id="nextButton">Next</button>
+    <button id="backButton">Back</button>
+
+    <script>
+        // Lyt efter klik på "Next" knappen
+        document.getElementById("nextButton").addEventListener("click", function() {
+            window.location.href = "{{ url_for('beregn') }}"; // Skift til næste side ved at ændre URL'en
+        });
+
+        // Lyt efter klik på "Back" knappen
+        document.getElementById("backButton").addEventListener("click", function() {
+            window.history.back(); // Gå tilbage til forrige side
+        });
+    </script>
+    
+</body>
+</html>

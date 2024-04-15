@@ -1,0 +1,18 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+# Generate mockup data
+categories = ['Category A', 'Category B', 'Category C', 'Category D']
+values = np.random.randint(10, 100, size=len(categories))
+
+# Create bar plot
+plt.bar(categories, values, color='skyblue')
+
+# Add labels and title
+plt.xlabel('Categories')
+plt.ylabel('Values')
+plt.title('Mockup Bar Plot')
+
+# Show plot
+plt.show()

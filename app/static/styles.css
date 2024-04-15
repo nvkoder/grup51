@@ -1,0 +1,99 @@
+#content {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+
+/* styles.css */
+input[type="time"] {
+    /* Tilpas CSS-styling efter behov */
+    width: 150px;
+}
+/* styles.css */
+.time-icon {
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sun {
+    background-image: url('sun-50.png'); /* Indsæt sti til solbillede */
+    left: 10px;
+}
+
+.moon {
+    background-image: url('moon-39.png'); /* Indsæt sti til månebillede */
+    left: 10px;
+}
+
+button#submit-button {
+    font-size: 24px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Styling kan tilpasses efter behov */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+
+
+/* style.css */
+
+/* Stil for tabellen */
+#elpriser-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Stil for tabellens overskriftsrække */
+#elpriser-table th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Stil for tabellens data-rækker */
+#elpriser-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Stil for lige rækker */
+#elpriser-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
